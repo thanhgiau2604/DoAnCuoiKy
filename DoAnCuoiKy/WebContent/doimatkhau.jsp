@@ -1,26 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<title>Webiste Thi Trắc Nghiệm Trực Tuyến</title>
-
-	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/.js"></script>
-	<!-- Custom Fonts -->
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/DoiMK.css">
+<title>Đổi mật khẩu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="content/css/DoiMatKhau.css" type="text/css" media="all" />  
+<link rel="stylesheet" href="content/font-awesome/css/font-awesome.css"> 
+<script src="jquery-2.2.1.js"></script>
 </head>
 <body>
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container dt" id="idtrangchu">
 				<!-- start khung -->
 				<div class="khung">
