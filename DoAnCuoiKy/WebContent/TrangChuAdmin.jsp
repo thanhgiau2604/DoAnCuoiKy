@@ -10,12 +10,13 @@
 	<meta name="author" content="">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Webiste Thi Trắc Nghiệm Trực Tuyến</title>
-	<!-- Bootstrap Core CSS, thu vien -->
+
+	<!-- Bootstrap Core CSS -->
 	<link href="file/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 	<!-- file jquery -->
 	<script type="text/javascript" src="file/js/jqTC.js"></script>
 	<script type="text/javascript" src="file/js/jqMenu.js"></script>
@@ -24,13 +25,24 @@
 	<link href="file/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-	<!-- personal css -->
-	<link rel="stylesheet" type="text/css" href="file/css/TCStyle.css">
+	<link rel="stylesheet" type="text/css" href="file/css/TC_AD.css">
 </head>
 <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="90">
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container dt" id="idtrangchu">
-				<div class="btn-btn-default nutlogin"><a href="Guest_DangNhap.jsp">Đăng nhập</a></div>
+				<!-- start khung -->
+				<div class="khung">
+					<button class="nuttt">
+						<img src="file/Images/Admin.png" alt="avatar" class="ava">
+						Nguyen Giau
+					</button>	
+					<div class="danhmuctt">
+						<a href="Ad_TDTT.jsp">Thay Đổi Thông Tin</a>
+						<a href="Ad_DoiMatKhau">Đổi Mật Khẩu</a>
+						<a href="TrangChu.jsp">Đăng Xuất</a>
+					</div>
+				</div> <!-- end khung -->
+
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
@@ -38,11 +50,18 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-						<img class="navbar-brand" src="file/Images/logo3.png" alt="">
+					<img class="navbar-brand" src="file/Images/logo3.png" alt="" width="70%" height="50px">
 				</div>
-				<div class="navbar-collapse navbar-ex1-collapse collapse" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right menu">
 						<li ><a class="btnTC" href="#idtrangchu">TRANG CHỦ</a></li>
+						<li ><a class="btnTC" href="Ad_QLCauHoi.jsp">QLCH</a></li>
+						<li ><a class="btnTC" href="Ad_QLDeThi.jsp">QLDT</a></li>
+						<li ><a class="btnTC" href="Ad_QLDiem.jsp">QLĐIỂM</a></li>
+						<li ><a class="btnTC" href="Ad_QLTB.jsp">QLTB</a></li>
+						<li ><a class="btnTC" href="AD_QLND.jsp">QLUSER</a></li>
+						<li ><a class="btnTC" href="AD_NhanPhanHoi.jsp">PHẢN HỒI</a></li>
+						<li ><a class="btnTC" href="Ad_QLBaiDang.jsp">BÀI ĐĂNG</a></li>
 						<li ><a class="btnGT" href="#idgioithieu">GIỚI THIỆU</a></li>					
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -51,15 +70,14 @@
 			</div> 
 		</nav>
 
-        	<div class="anhnen" id="idtc">
+			<div class="anhnen" id="idtc">
         		<img src="file/Images/teacherback.png" alt="">
         		<div class="chunho">Xin chào các bạn đến với</div>
         		<div class="chuto">WEBSITE THI TRẮC NGHIỆM </br>TRỰC TUYẾN</div>
         		<div class="btn btn-default nutgt"><a href="#thongtin">Thông tin</a></div> 
         	</div>
-        	
-		
 	<!-- welcome -->
+
 	<section id="tl-intro" class="tl-intro bg-solid">
 		<div class="container" id="thongtin">
 			<div class="row no-gutters">
@@ -117,7 +135,6 @@
 		</div> <!-- Container end -->
 	</section>
 
-
 		<section id="tl-about" class="tl-about">
 			<div class="container" id="baidang">
 				<div class="row">
@@ -126,7 +143,7 @@
 							Chào bạn <br/>đến với website thi trắc nghiệm trực tuyến
 						</h2>
 						<div class="about-content">
-							<p class="wow fadeIn">Nếu bạn có niềm đam mê kiến thức hoặc đang chuẩn bị ôn luyện kiến thức để kiểm tra hay thi cử thì website thi trắc nghiệm của chúng tôi sẽ là một lựa chọn đúng đắn. Bởi lẽ, đến với website bạn không những được trải nghiệm với những đề thi cực hot do giáo viên tạo mà hệ thống còn bổ sung những đề thi được cập nhật liên tục về những kiến thức mới nhất. Còn chờ gì nữa, hãy ghi danh với chúng tôi <a href="Guest_DangNhap.jsp">tại đây</a>. Chúng tôi sẽ tích cực hỗ trợ bạn!</p>
+							<p class="wow fadeIn">Nếu bạn có niềm đam mê kiến thức hoặc đang chuẩn bị ôn luyện kiến thức để kiểm tra hay thi cử thì website thi trắc nghiệm của chúng tôi sẽ là một lựa chọn đúng đắn. Bởi lẽ, đến với website bạn không những được trải nghiệm với những đề thi cực hot do giáo viên tạo mà hệ thống còn bổ sung những đề thi được cập nhật liên tục về những kiến thức mới nhất. Còn chờ gì nữa, hãy ghi danh với chúng tôi <a href="">tại đây</a>. Chúng tôi sẽ tích cực hỗ trợ bạn!</p>
 							<div class="row hinhanh">
 								<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 									<img src="file/Images/learning.png">
@@ -181,9 +198,8 @@
 				</div> <!-- Row End -->
 			</div> <!-- Container end --></section>
 <!-- About Area End -->
-
-
 	<!-- end welcome + baidang -->
+		
 	<!-- 	gioithieu -->
 <div class="khunggioithieu" id="gioithieu">
 	<div class="container gioithieu" id="idgioithieu">
@@ -226,7 +242,7 @@
 		<p style="padding-bottom: 13px">Đến với website, chúng tôi có thể khiến bạn yên tâm về:</p>
 		<div class="row">
 			<!-- tính chính xác -->
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 				<div class="item">
 					<div class="item-thumb">
 						<a href="#">
@@ -240,7 +256,7 @@
 				</div>	
 			</div>
 			<!-- tính hiệu quả -->
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 				<div class="item">
 					<div class="item-thumb">
 						<a href="#">
@@ -254,7 +270,7 @@
 				</div>	
 			</div>
 			<!-- tính tiện dụng -->
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 				<div class="item">
 					<div class="item-thumb">
 						<a href="#">
@@ -268,7 +284,7 @@
 				</div>	
 			</div>
 			<!-- tính tương thích -->
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 				<div class="item">
 					<div class="item-thumb">
 						<a href="#">
@@ -298,16 +314,6 @@
 						thể hiện <a href="#chucnang">tại đây</a>.</p> 
 				</div>
 			</div>
-
-				<div class="note">
-					<div class="row">
-						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
-						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="padding-bottom: 40px">
-							<span><i><span class="fa fa-exclamation-circle fa-2x"></span></i></span>
-							<span class="luuy">Bạn được sử dụng chức năng chính của website chỉ khi được là thành viên của website, bạn có thể đăng ký thành viên <a href="Guest_DangKy.jsp">tại đây</a>, nếu đã có tài khoản bạn có thể <a href="Guest_DangNhap.jsp">đăng nhập</a>.</span>
-						</div>
-					</div>
-				</div>	
 			</div>
 		</div>	  
 	</div>
@@ -465,7 +471,7 @@
 			</div>
 		</div>
 		<!-- end chức năng -->
-		  <!-- Footer -->
+  <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
         	<div class="logofooter">
@@ -496,7 +502,7 @@
                         <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2"></div>
                         <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">
                         	<ul class="shortlink">
-                        		<li><a href="TrangChu.jsp">Trang chủ</a></li>
+                        		<li><a href="TrangChuAdmin.jsp">Trang chủ</a></li>
                         		<li><a href="#baidang">Bài đăng</a></li>
                         		<li><a href="#gioithieu">Giới thiệu</a></li>
                         		<li><a href="#chucnang">Chức năng</a></li>
@@ -504,10 +510,10 @@
                         </div>
                          <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5">
                          	<ul class="shortlink">
-                         		<li><a href="">Câu hỏi</a></li>
-                         		<li><a href="">Đề thi</a></li>
-                         		<li><a href="">Điểm</a></li>
-                         		<li><a href="">Thông báo</a></li>
+                         		<li><a href="Ad_QLCauHoi.jsp">Câu hỏi</a></li>
+                         		<li><a href="Ad_QLDeThi.jsp">Đề thi</a></li>
+                         		<li><a href="Ad_QLDiem.jsp">Điểm</a></li>
+                         		<li><a href="Ad_QLTB.jsp">Thông báo</a></li>
                          	</ul>
                         </div>
                     </div>

@@ -10,27 +10,28 @@
 	<meta name="author" content="">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Webiste Thi Trắc Nghiệm Trực Tuyến</title>
-	<!-- Bootstrap Core CSS, thu vien -->
+
+	<!-- Bootstrap Core CSS -->
 	<link href="file/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>\
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-	<!-- file jquery -->
+	<!-- js -->
 	<script type="text/javascript" src="file/js/jqTC.js"></script>
 	<script type="text/javascript" src="file/js/jqMenu.js"></script>
 	<script type="text/javascript" src="file/js/jqScroll.js"></script>
+	<script type="text/javascript" src="file/js/jqDangKy.js"></script>
 	<!-- Custom Fonts -->
 	<link href="file/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-	<!-- personal css -->
-	<link rel="stylesheet" type="text/css" href="file/css/TCStyle.css">
+	<link rel="stylesheet" type="text/css" href="file/css/DangKy.css">
 </head>
 <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="90">
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container dt" id="idtrangchu">
-				<div class="btn-btn-default nutlogin"><a href="Guest_DangNhap.jsp">Đăng nhập</a></div>
+				<div class="btn-btn-default nutlogin"><a href="dangnhap.jsp">Đăng nhập</a></div>
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
@@ -38,10 +39,11 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-						<img class="navbar-brand" src="file/Images/logo3.png" alt="">
+						<img class="navbar-brand" src="file/Images/logo3.png" alt="" width="70%" height="50px">
 				</div>
 				<div class="navbar-collapse navbar-ex1-collapse collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right menu">
+						 <!-- <li class="hidden"><a href="#page-top"></a> </li> -->
 						<li ><a class="btnTC" href="#idtrangchu">TRANG CHỦ</a></li>
 						<li ><a class="btnGT" href="#idgioithieu">GIỚI THIỆU</a></li>					
 					</ul>
@@ -51,19 +53,70 @@
 			</div> 
 		</nav>
 
-        	<div class="anhnen" id="idtc">
-        		<img src="file/Images/teacherback.png" alt="">
-        		<div class="chunho">Xin chào các bạn đến với</div>
-        		<div class="chuto">WEBSITE THI TRẮC NGHIỆM </br>TRỰC TUYẾN</div>
-        		<div class="btn btn-default nutgt"><a href="#thongtin">Thông tin</a></div> 
-        	</div>
-        	
+		  <!-- form dang ky -->
+		<div class="main-content-agile dangky">
+		<div class="sub-main-w3">	
+			<div class="wthree-pro">
+				<h2>Đăng ký tài khoản</h2>
+			</div>
+			<form action="#" method="post" id="formdangky">
+				<div class="pom-agile">
+				<!-- tên đăng nhập -->
+					<input placeholder="*Tên đăng nhập" name="username" class="user" type="text">
+					<span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+				</div>
+				<!-- mật khẩu -->
+				<div class="pom-agile">
+					<input  placeholder="*Mật khẩu" name="password" class="Infor" type="password" id="password">
+					<span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+				</div>
+				<!-- Xác nhận mk -->
+				<div class="pom-agile">
+					<input  placeholder="*Xác nhận mật khẩu" name="repassword" class="Infor" type="password" >
+					<span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+				</div>
+				<!-- mật khẩu cap 2 -->
+				<div class="pom-agile">
+					<input  placeholder="*Mật khẩu cấp 2" name="passwordc2" class="Infor" type="password" >
+					<span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+				</div>
+				<!-- Họ tên -->
+				<div class="pom-agile">
+					<input  placeholder="*Họ và tên" name="fullname" class="Infor" type="text">
+					<span class="icon2"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+				</div>
+				<!-- Email -->
+				<div class="pom-agile">
+					<input  placeholder="*Email" name="email" class="Email" type="text">
+					<span class="icon2"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+				</div>
+				<!-- Số điện thoại -->
+				<div class="pom-agile">
+					<input  placeholder="Số điện thoại" name="telenum" class="Infor" type="text">
+					<span class="icon2"><i class="fa fa-phone" aria-hidden="true"></i></span>
+				</div>
+				<!-- Địa chỉ -->
+				<div class="pom-agile">
+					<input  placeholder="*Địa chỉ" name="address" class="Infor" type="text">
+					<span class="icon1"><i class="fa fa-address-book"></i></span>
+				</div>
+				<div class="sub-w3l">
+					<h6>Chưa có tài khoản? <a href="dangky.jsp" class="dky">Đăng ký ngay</a></h6> 
+					<div class="right-w3l">
+						<input type="submit" value="Đăng nhập">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- end form dang ky-->
 		
 	<!-- welcome -->
+
 	<section id="tl-intro" class="tl-intro bg-solid">
-		<div class="container" id="thongtin">
+		<div class="container">
 			<div class="row no-gutters">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow zoomIn">
+				<div class="col-lg-4 wow zoomIn" data-wow-delay=".1s">
 					<a href="#" class="tl-intro-wrapper bg-yellow">
 						<span class="intro-icon">
 							<i class="fa fa-question"></i>
@@ -75,10 +128,10 @@
 						</div> <!-- Intro Content end -->
 					</a> <!-- Intro Wrapper end -->
 				</div> <!-- Col End -->
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow zoomIn">
+				<div class="col-lg-4 wow zoomIn" data-wow-delay=".3s">
 					<a href="#" class="tl-intro-wrapper bg-green">
 						<span class="intro-icon">
-							<i class="fa fa-list-ol icon2"></i>
+							<i class="fa fa-list-ol"></i>
 						</span> <!-- Intro Icon End -->
 						<div class="intro-content">
 							<h6 class="intro-title">ĐỀ THI</h6>
@@ -87,46 +140,31 @@
 						</div> <!-- Intro Content end -->
 					</a> <!-- Intro Wrapper end -->
 				</div> <!-- Col End -->
-			</div>
-			<div class="row no-gutters">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow zoomIn">
+				<div class="col-lg-4 wow zoomIn" data-wow-delay=".5s">
 					<a href="#" class="tl-intro-wrapper bg-orange">
 						<span class="intro-icon">
-							<i class="fa fa-eye icon3"></i>
+							<i class="fa fa-eye"></i>
 						</span> <!-- Intro Icon End -->
 						<div class="intro-content">
 							<h6 class="intro-title">ĐÁNH GIÁ</h6>
-							<p>Công tâm khách quan.</p>
-							<p>Người dùng phản hồi lại - nếu cần thiết</p>
-						</div> <!-- Intro Content end -->
-					</a> <!-- Intro Wrapper end -->
-				</div> <!-- Col End -->
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow zoomIn">
-					<a href="#" class="tl-intro-wrapper bg-blue">
-						<span class="intro-icon">
-							<i class="fa fa-thumbs-up icon4"></i>
-						</span> <!-- Intro Icon End -->
-						<div class="intro-content">
-							<h6 class="intro-title">CHẤT LƯỢNG</h6>
-							<p>Quy tụ nhiều kiến thức bổ ích.</p>
-							<p>Được chia sẻ với mọi học sinh, sinh viên</p>
+							<p>Công tâm khách quan</p>
+							<p>Phản hồi lại - nếu cần thiết</p>
 						</div> <!-- Intro Content end -->
 					</a> <!-- Intro Wrapper end -->
 				</div> <!-- Col End -->
 			</div> <!-- Row End -->
-		</div> <!-- Container end -->
-	</section>
+		</div> <!-- Container end --></section>
 
 
 		<section id="tl-about" class="tl-about">
-			<div class="container" id="baidang">
+			<div class="container">
 				<div class="row">
 					<div class="col-lg-8">
 						<h2 class="column-title wow fadeIn" data-wow-delay=".1s">
 							Chào bạn <br/>đến với website thi trắc nghiệm trực tuyến
 						</h2>
 						<div class="about-content">
-							<p class="wow fadeIn">Nếu bạn có niềm đam mê kiến thức hoặc đang chuẩn bị ôn luyện kiến thức để kiểm tra hay thi cử thì website thi trắc nghiệm của chúng tôi sẽ là một lựa chọn đúng đắn. Bởi lẽ, đến với website bạn không những được trải nghiệm với những đề thi cực hot do giáo viên tạo mà hệ thống còn bổ sung những đề thi được cập nhật liên tục về những kiến thức mới nhất. Còn chờ gì nữa, hãy ghi danh với chúng tôi <a href="Guest_DangNhap.jsp">tại đây</a>. Chúng tôi sẽ tích cực hỗ trợ bạn!</p>
+							<p class="wow fadeIn">Nếu bạn có niềm đam mê kiến thức hoặc đang chuẩn bị ôn luyện kiến thức để kiểm tra hay thi cử thì website thi trắc nghiệm của chúng tôi sẽ là một lựa chọn đúng đắn. Bởi lẽ, đến với website bạn không những được trải nghiệm với những đề thi cực hot do giáo viên tạo mà hệ thống còn bổ sung những đề thi được cập nhật liên tục về những kiến thức mới nhất. Còn chờ gì nữa, hãy ghi danh với chúng tôi <a href="">tại đây</a>. Chúng tôi sẽ tích cực hỗ trợ bạn!</p>
 							<div class="row hinhanh">
 								<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 									<img src="file/Images/learning.png">
@@ -143,7 +181,7 @@
 							</div>
 						</div> <!-- About Content end -->
 					</div> <!-- Col end -->
-					<div class="col-lg-4 wow fadeInRight">
+					<div class="col-lg-4 wow fadeInRight" id="baidang">
 						<div class="about-event">
 							<h2 class="event-title">Bài đăng gần đây</h2>
 							<div class="event-box-wrapper">
@@ -295,7 +333,7 @@
 				<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="padding-top: 10px">
 					<p>Website được phân chia thành 4 quyền truy cập: khách, giáo viên, thí sinh, admin.
 						Mỗi quyền truy cập có những chức năng khác nhau. Chi tiết một số chức năng chính được
-						thể hiện <a href="#chucnang">tại đây</a>.</p> 
+						thể hiện <a href="#">tại đây</a>.</p> 
 				</div>
 			</div>
 
@@ -304,7 +342,7 @@
 						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
 						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9" style="padding-bottom: 40px">
 							<span><i><span class="fa fa-exclamation-circle fa-2x"></span></i></span>
-							<span class="luuy">Bạn được sử dụng chức năng chính của website chỉ khi được là thành viên của website, bạn có thể đăng ký thành viên <a href="Guest_DangKy.jsp">tại đây</a>, nếu đã có tài khoản bạn có thể <a href="Guest_DangNhap.jsp">đăng nhập</a>.</span>
+							<span class="luuy">Bạn được sử dụng chức năng chính của website chỉ khi được là thành viên của website, bạn có thể đăng ký thành viên <a href="">tại đây</a>, nếu đã có tài khoản bạn có thể <a href="">đăng nhập</a>.</span>
 						</div>
 					</div>
 				</div>	
@@ -316,8 +354,8 @@
     
 	<!-- end gioi thieu -->
 		<!-- Chức năng -->
-		<div class="chucnang" id="chucnang">
-			<div class="container">
+		<div class="chucnang" >
+			<div class="container" id="chucnang">
 				<div class="col-lg-12 text-center">
 					<h2>CHỨC NĂNG CHÍNH</h2>
 				</div>	
@@ -465,7 +503,7 @@
 			</div>
 		</div>
 		<!-- end chức năng -->
-		  <!-- Footer -->
+	  <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
         	<div class="logofooter">
